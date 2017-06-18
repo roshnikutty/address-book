@@ -3,7 +3,7 @@ import './contact.css';
 
 export default function Contact(props) {
     return (<div>
-        <span>{props.name}</span> <span>{props.photo}</span> <span>{props.address}</span>
+        <span><img src = {props.photo}/></span> <span><h3>{props.name}</h3></span>  <span><h4>{props.address}</h4></span>
     </div>);
 }
 
