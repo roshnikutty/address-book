@@ -1,5 +1,6 @@
 import React from 'react';
 import Contact from './contact';
+import './address-book.css';
 
 export default class AddressBook extends React.Component {
     constructor(props) {
@@ -24,12 +25,12 @@ export default class AddressBook extends React.Component {
 
     render() {
         const contacts = this.state.contacts.map((contact, index) =>{
-            <div>
+            return (<div className = "row">
                 <Contact key={index} {...contact} />
-            </div>
+            </div>);
             });
         return (
-            <div>{contacts}</div>
+            <div className = "container">{contacts}</div>
         );
     }
 }
